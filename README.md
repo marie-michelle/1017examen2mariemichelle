@@ -28,6 +28,9 @@ npm install -g @vue/cli
 npm update -g @vue/cli (pour mettre à jour)
 vue create nomduprojet
 
+Démarrer le projet
+npm run serve
+
 Les routes
 npm i vue-router@next --save
 
