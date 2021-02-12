@@ -2,7 +2,7 @@
   <div>
 
     <h3 class="mb-4 pb-4">Projets</h3>
-<ProjetTemplate class="flex" v-for="item in projets" :key="item.projet"><span >{{item.projet}}</span></ProjetTemplate>
+<ProjetTemplate class="flex" v-for="item in projets" :key="item.projet">{{item.projet}}</ProjetTemplate>
 
 
   </div>

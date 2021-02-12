@@ -2,7 +2,10 @@
   <div class="bgcolor center">
     <h3>entete.</h3>
     <div class="pl-5 ml-5">
-  <Connexion></Connexion>
+      <slot></slot>
+    </div>
+    <div class="pl-5 ml-5">
+      <Connexion></Connexion>
     </div>
   </div>
 </template>
@@ -11,12 +14,11 @@
 import Connexion from "@/components/Connexion";
 export default {
   name: "Entete",
-  components: {
-    Connexion
-  },
+
   props: {
     msg: String,
   },
+  components: {Connexion}
 };
 </script>
 

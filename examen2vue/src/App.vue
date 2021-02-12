@@ -1,13 +1,10 @@
 <template>
-
   <div id="app">
-    <Entete></Entete>
-    <div id="nav" >
-      <router-link to="/">Accueil</router-link> |
-      <router-link to="/utilisateur">Utilisateur</router-link> |
-      <router-link to="/projet">Projets</router-link> |
-      <router-link to="/contact">Contact</router-link>
-    </div>
+  <Entete>
+    <router-link  v-for="route in routes" :key="route.path" :to="route.path">
+      {{route.name}}
+    </router-link>
+  </Entete>
     <router-view class="content"/>
     <div class="footer"></div>
     <Pieddepage></Pieddepage>
@@ -18,11 +15,30 @@
 <script>
 import Pieddepage from "@/components/Pieddepage";
 import Entete from "@/components/Entete";
-export default {
-  components: {Entete, Pieddepage}
-}
-</script>
 
+export default {
+
+name: "App",
+    props: {
+  msg: String,
+},
+data(){
+  return{
+    loggedIn: false,
+
+    routes: [
+      {path: '/', name: 'Accueil', component: 'Accueil'},
+      {path: '/utilisateur', name: 'Utilisateur', component: 'Utilisateur'},
+      {path: '/projet', name: 'Projet', component: 'Projet'},
+      {path: '/contact', name: 'Contact', component: 'Contact'},
+    ],
+  }
+},
+  components: { Pieddepage, Entete },
+  // , ,
+};
+
+</script>
 
 <style>
 #app {
