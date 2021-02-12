@@ -6,6 +6,11 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '*',
+    name: 'NotFound',
+    component: () => import('../views/NotFound.vue')
+  },
+  {
     path: '/',
     name: 'Accueil',
     component: Accueil
@@ -13,18 +18,22 @@ const routes = [
   {
     path: '/accueil',
     name: 'Accueil',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Accueil.vue')
+    component: Accueil
   },
   {
     path: '/utilisateur',
     name: 'Utilisateur',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Utilisateur.vue')
+    component: () => import('../views/Utilisateur.vue')
+  },
+  {
+    path: '/projet',
+    name: 'Projet',
+    component: () => import('../views/Projets.vue')
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: () => import('../views/Contact.vue')
   }
 ]
 
