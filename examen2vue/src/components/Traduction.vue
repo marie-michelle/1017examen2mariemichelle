@@ -1,11 +1,11 @@
 <template>
   <table>
 
-<ul>
-  <li v-for="item in menuAnglais" :key="item.id+item.name" class="green">
-    <router-link :to="{path:item.name}" >{{ 'language' | traduire(langue)}}</router-link>
-  </li>
-</ul>
+    <ul>
+      <li v-for="item in menuAnglais" :key="item.id+item.name" class="green">
+        <router-link :to="{path:item.name}" >{{ 'language' | traduire(langue)}}</router-link>
+      </li>
+    </ul>
   </table>
 </template>
 

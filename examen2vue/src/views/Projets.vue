@@ -2,7 +2,7 @@
   <div>
 
     <h1 class="m-4 p-4">{{ 'projects' | traduire(langue)}}</h1>
-<ProjetTemplate class="flex" v-for="item in projets" :key="item.projet">{{item.projet}}</ProjetTemplate>
+    <ProjetTemplate class="flex" v-for="item in projets" :key="item.projet">{{item.projet}}</ProjetTemplate>
 
 
   </div>
@@ -21,7 +21,7 @@ export default {
         { projet: 'Angular 2 - Projet Forfait Voyage'},
         { projet: 'Vue 2 - Projet Exercices Vue'}
       ]
-     }
+    }
   },
   name: "Projet",
   components: {

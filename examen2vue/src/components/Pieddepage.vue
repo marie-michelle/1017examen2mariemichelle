@@ -7,7 +7,7 @@ export default {
   directives: {
     footer:{
       inserted: function (el) {
-      el.innerHTML = '© <a href="https://www.marie-michelle.com" target="_blank">marie-michelle.com</a> ' + new Date().getFullYear() + ' Tous droits réservés.' + el.innerHTML;
+        el.innerHTML = '© <a href="https://www.marie-michelle.com" target="_blank">marie-michelle.com</a> ' + new Date().getFullYear() + ' Tous droits réservés.' + el.innerHTML;
       }
     }
   }

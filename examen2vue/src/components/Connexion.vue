@@ -19,22 +19,22 @@ export default {
 
   methods: {
     connectedValidate(){
-        let connectedStatus = '';
+      let connectedStatus = '';
 
-        if (this.loggedIn === true) {
-          connectedStatus = 'Déconnexion';
-          this.$router.push('/utilisateur');
-        } else {
-          connectedStatus = 'Connexion';
-          this.$router.push('/accueil');
-        }
-        return connectedStatus;
+      if (this.loggedIn === true) {
+        connectedStatus = 'Déconnexion';
+        this.$router.push('/utilisateur');
+      } else {
+        connectedStatus = 'Connexion';
+        this.$router.push('/accueil');
       }
+      return connectedStatus;
+    }
   },
 
-created() {
+  created() {
     this.connectedValidate()
-}
+  }
 
 };
 </script>
