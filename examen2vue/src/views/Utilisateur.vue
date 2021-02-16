@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <h1>Utilisateur</h1>
     <Profil></Profil>
   </div>
 </template>
@@ -8,7 +7,9 @@
 <script>
 
 import Profil from "@/components/Profil";
+import {mixinTraduction} from "@/mixins/mixinTraduction";
 export default {
+  mixins: [mixinTraduction],
   name: 'Utilisateur',
   components: {
     Profil

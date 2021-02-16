@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <h3 class="mb-4 pb-4">Projets</h3>
+    <h1 class="m-4 p-4">{{ 'projects' | traduire(langue)}}</h1>
 <ProjetTemplate class="flex" v-for="item in projets" :key="item.projet">{{item.projet}}</ProjetTemplate>
 
 
@@ -10,8 +10,10 @@
 
 <script>
 import ProjetTemplate from "@/components/Projets-template";
+import {mixinTraduction} from "@/mixins/mixinTraduction";
 
 export default {
+  mixins: [mixinTraduction],
   data() {
     return{
       projets: [

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
   <Entete>
-    <router-link  v-for="route in routes" :key="route.path" :to="route.path">
+    <router-link  v-for="route in routes" :key="route.path" :to="route.path" class="pl-3">
       {{route.name}}
     </router-link>
   </Entete>
@@ -27,15 +27,14 @@ data(){
     loggedIn: false,
 
     routes: [
-      {path: '/', name: 'Accueil', component: 'Accueil'},
-      {path: '/utilisateur', name: 'Utilisateur', component: 'Utilisateur'},
-      {path: '/projet', name: 'Projet', component: 'Projet'},
-      {path: '/contact', name: 'Contact', component: 'Contact'},
+      {path: '/', name: 'Accueil', component: 'Accueil', id:1},
+      {path: '/utilisateur', name: 'Utilisateur', component: 'Utilisateur', id:2},
+      {path: '/projet', name: 'Projet', component: 'Projet', id:3},
+      {path: '/contact', name: 'Contact', component: 'Contact', id:4},
     ],
   }
 },
   components: { Pieddepage, Entete },
-  // , ,
 };
 
 </script>

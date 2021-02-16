@@ -1,7 +1,6 @@
 <template>
   <div>
     <button v-on:click="loggedIn = !loggedIn" class="btn btn-secondary">{{ connectedValidate() }}</button>
-
   </div>
 </template>
 

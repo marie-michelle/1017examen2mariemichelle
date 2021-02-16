@@ -2,8 +2,8 @@
   <div class="pb-5 mb-5">
 
           <div class="jumbotron sizing">
-            <h1 class="display-4 white">Contact</h1>
-            <p class="lead white">Pour nous écrire, veuillez remplir le formulaire.</p>
+            <h1 class="m-4 p-4 display-4">{{ 'contact' | traduire(langue)}}</h1>
+            <p class="lead white">{{ 'writeToUs' | traduire(langue)}}</p>
 
             <form @submit="checkForm" method="post">
 
@@ -15,26 +15,26 @@
 
               <div class="form-group">
                 <label for="InputName"></label>
-                <input v-model="firstname" type="text" class="form-control" id="InputName" placeholder="Prénom"><br>
+                <input v-model="firstname" type="text" class="form-control" id="InputName" :placeholder="'firstname' | traduire(langue)"><br>
 
                 <label for="InputLastName"></label>
-                <input v-model="lastname" type="text" class="form-control" id="InputLastName" placeholder="Nom"><br>
+                <input v-model="lastname" type="text" class="form-control" id="InputLastName" :placeholder="'lastname' | traduire(langue)"><br>
 
                 <label for="InputEmail"></label>
-                <input v-model="email" type="email" class="form-control" id="InputEmail" placeholder="Courriel"><br>
+                <input v-model="email" type="email" class="form-control" id="InputEmail" :placeholder="'email' | traduire(langue)"><br>
 
               </div>
 
               <select class="custom-select">
-                <option selected>Choisir un sujet...</option>
+                <option selected>{{ 'chooseSubject' | traduire(langue)}}</option>
                 <option v-for="item in categories" :key="item.categorie">{{ item.categorie }}</option>
               </select>
               <br><br><br>
               <div class="form-group">
-                <textarea v-model="message" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Votre message..."></textarea>
+                <textarea v-model="message" class="form-control" id="exampleFormControlTextarea1" rows="3" :placeholder="'yourMessage' | traduire(langue)"></textarea>
               </div>
 
-              <button type="submit" class="btn btn-secondary">Soumettre</button>
+              <button type="submit" class="btn btn-secondary">{{ 'submit' | traduire(langue)}}</button>
             </form>
 
         </div>
@@ -46,7 +46,10 @@
 
 <script>
 
+import {mixinTraduction} from "@/mixins/mixinTraduction";
+
 export default {
+
   data() {
     return{
       errors: [],
@@ -90,6 +93,7 @@ export default {
     }
   },
   name: "Contact",
+  mixins: [mixinTraduction],
 };
 
 </script>
