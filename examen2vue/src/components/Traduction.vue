@@ -38,7 +38,7 @@ a {
   color: #42b983;
 }
 .green {
-  green: #42b983;
+  color: #42b983;
 }
 .center {
   align-items: center;
