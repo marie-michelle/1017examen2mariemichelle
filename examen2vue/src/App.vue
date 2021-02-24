@@ -1,42 +1,51 @@
 <template>
   <div id="app">
-  <Entete>
-    <router-link  v-for="route in routes" :key="route.path" :to="route.path" class="pl-3">
-      {{route.name}}
-    </router-link>
-  </Entete>
-    <router-view class="content"/>
+    <!-- Header avec slot pour y inclure les routes -->
+    <Entete>
+      <router-link
+        v-for="route in routes"
+        :key="route.path"
+        :to="route.path"
+        class="pl-3"
+      >
+        {{ route.name }}
+      </router-link>
+    </Entete>
+    <router-view class="content" />
+    <!-- Module pied de page avec directive -->
     <div class="footer"></div>
     <Pieddepage></Pieddepage>
   </div>
 </template>
-
 
 <script>
 import Pieddepage from "@/components/Pieddepage";
 import Entete from "@/components/Entete";
 
 export default {
+  name: "App",
+  props: {
+    msg: String,
+  },
+  data() {
+    return {
+      loggedIn: false,
 
-name: "App",
-    props: {
-  msg: String,
-},
-data(){
-  return{
-    loggedIn: false,
-
-    routes: [
-      {path: '/', name: 'Accueil', component: 'Accueil', id:1},
-      {path: '/utilisateur', name: 'Utilisateur', component: 'Utilisateur', id:2},
-      {path: '/projet', name: 'Projet', component: 'Projet', id:3},
-      {path: '/contact', name: 'Contact', component: 'Contact', id:4},
-    ],
-  }
-},
+      routes: [
+        { path: "/", name: "Accueil", component: "Accueil", id: 1 },
+        {
+          path: "/utilisateur",
+          name: "Utilisateur",
+          component: "Utilisateur",
+          id: 2,
+        },
+        { path: "/projet", name: "Projet", component: "Projet", id: 3 },
+        { path: "/contact", name: "Contact", component: "Contact", id: 4 },
+      ],
+    };
+  },
   components: { Pieddepage, Entete },
 };
-
 </script>
 
 <style>
@@ -48,7 +57,8 @@ data(){
   color: #2c3e50;
   height: 100%;
 }
-body, html{
+body,
+html {
   padding: 0;
   margin: 0;
   display: flex;
@@ -69,19 +79,18 @@ body, html{
   color: #42b983;
 }
 
-.a{
+.a {
   background-color: #2c3e50;
 }
 
-.bgcolor{
+.bgcolor {
   background-color: #2c3e50;
   height: 5vh;
 }
 .content {
   flex: 1;
 }
-.footer{
+.footer {
   flex-shrink: 0;
 }
-
 </style>

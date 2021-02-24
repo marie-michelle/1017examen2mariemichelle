@@ -1,27 +1,28 @@
 <template>
   <div class="bgcolor center">
-    <h3>{{ 'header' | traduire(langue)}}</h3>
+    <h3>{{ "header" | traduire(langue) }}</h3>
     <div class="pl-5 ml-5">
       <slot></slot>
     </div>
+    <!-- Menu traduction -->
     <div class="pl-5 ml-5">
       <Traduction></Traduction>
     </div>
+    <!-- Bouton connection -->
     <div class="pl-5 ml-5">
       <Connexion></Connexion>
     </div>
-
   </div>
 </template>
 
 <script>
 import Connexion from "@/components/Connexion";
 import Traduction from "@/components/Traduction";
-import {mixinTraduction} from "@/mixins/mixinTraduction";
+import { mixinTraduction } from "@/mixins/mixinTraduction";
 
 export default {
   name: "Entete",
-  components: {Traduction, Connexion},
+  components: { Traduction, Connexion },
   mixins: [mixinTraduction],
 };
 </script>

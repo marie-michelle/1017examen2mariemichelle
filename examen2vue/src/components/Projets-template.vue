@@ -1,36 +1,32 @@
 <template>
   <div>
-
+    <!-- Card présentation des projets -->
     <div class="card" style="width: 18rem;">
-      <img class="card-img-top" :src="chatTropChou" alt="Card image cat">
+      <img class="card-img-top" :src="chatTropChou" alt="Card image cat" />
       <div class="card-body">
         <p class="card-text"><slot></slot></p>
       </div>
     </div>
-
   </div>
 </template>
 
 <script>
-import chatTropChou from'../assets/img/chat-trop-chou.jpg';
+import chatTropChou from "../assets/img/chat-trop-chou.jpg";
 
 export default {
   data() {
-    return{
+    return {
       chatTropChou: chatTropChou,
       projets: [
         'React.js - Projet "Netflix"',
-        'Angular 2 - Projet Forfait Voyage',
-        'Vue 2 - Projet Exercices Vue'
-      ]
-    }
+        "Angular 2 - Projet Forfait Voyage",
+        "Vue 2 - Projet Exercices Vue",
+      ],
+    };
   },
   name: "ProjetTemplate",
-  props: {
-
-  },
+  props: {},
 };
-
 </script>
 
 <style scoped>
@@ -48,7 +44,7 @@ li {
 a {
   color: #42b983;
 }
-.card{
+.card {
   width: 100%;
   max-width: 300px;
   min-width: 200px;

@@ -1,32 +1,33 @@
 <template>
   <table>
-
+    <!-- Module de traduction, redirection vers le menu anglais -->
     <ul>
-      <li v-for="item in menuAnglais" :key="item.id+item.name" class="green">
-        <router-link :to="{path:item.name}" >{{ 'language' | traduire(langue)}}</router-link>
+      <li v-for="item in menuAnglais" :key="item.id + item.name" class="green">
+        <router-link :to="{ path: item.name }">{{
+          "language" | traduire(langue)
+        }}</router-link>
       </li>
     </ul>
   </table>
 </template>
 
 <script>
-import {mixinTraduction} from "@/mixins/mixinTraduction";
+import { mixinTraduction } from "@/mixins/mixinTraduction";
 
 export default {
   mixins: [mixinTraduction],
-  name: 'Traduction',
+  name: "Traduction",
   data() {
-    return{
+    return {
       menuAnglais: [
-        {name: 'home', id:1},
-        {name: 'user', id:2},
-        {name: 'project', id:3},
-        {name: 'contact', id:4},
-      ]
-    }
-  }
-}
-
+        { name: "home", id: 1 },
+        { name: "user", id: 2 },
+        { name: "project", id: 3 },
+        { name: "contact", id: 4 },
+      ],
+    };
+  },
+};
 </script>
 
 <style scoped>

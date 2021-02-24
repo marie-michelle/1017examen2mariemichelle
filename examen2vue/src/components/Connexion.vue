@@ -1,41 +1,44 @@
 <template>
+  <!-- LOG IN simulé avec booleen -->
   <div>
-    <button v-on:click="loggedIn = !loggedIn" class="btn btn-secondary">{{ connectedValidate() }}</button>
+    <button v-on:click="loggedIn = !loggedIn" class="btn btn-secondary">
+      {{ connectedValidate() }}
+    </button>
   </div>
 </template>
 
 <script>
-
 export default {
   name: "Connexion",
   props: {
     msg: String,
   },
-  data(){
-    return{
+  data() {
+    return {
       loggedIn: false,
-    }
+    };
   },
 
   methods: {
-    connectedValidate(){
-      let connectedStatus = '';
+    // Modification de la route si la connection est vrai
+
+    connectedValidate() {
+      let connectedStatus = "";
 
       if (this.loggedIn === true) {
-        connectedStatus = 'Déconnexion';
-        this.$router.push('/utilisateur');
+        connectedStatus = "Déconnexion";
+        this.$router.push("/utilisateur");
       } else {
-        connectedStatus = 'Connexion';
-        this.$router.push('/accueil');
+        connectedStatus = "Connexion";
+        this.$router.push("/accueil");
       }
       return connectedStatus;
-    }
+    },
   },
 
   created() {
-    this.connectedValidate()
-  }
-
+    this.connectedValidate();
+  },
 };
 </script>
 
