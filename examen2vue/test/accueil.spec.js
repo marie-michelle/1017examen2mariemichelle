@@ -1,3 +1,5 @@
+// Test si le composant affiche
+
 import Accueil from "../src/components/Accueil";
 import { mount } from "@vue/test-utils";
 

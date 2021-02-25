@@ -1,7 +1,7 @@
-// Import the `mount()` method from Vue Test Utils
+// Test si le composant affiche
+
 import { mount } from "@vue/test-utils";
 import Projets from "../src/views/Projets";
-// The component to test
 
 test("mount a vue component", () => {
   const wrapper = mount(Projets);

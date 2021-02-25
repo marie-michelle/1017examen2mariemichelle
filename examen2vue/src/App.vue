@@ -85,7 +85,7 @@ html {
 
 .bgcolor {
   background-color: #2c3e50;
-  height: 5vh;
+  height: 10vh;
 }
 .content {
   flex: 1;
