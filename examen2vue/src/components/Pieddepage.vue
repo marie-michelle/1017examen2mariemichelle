@@ -1,6 +1,11 @@
 <template>
   <!-- Directive de bas de page -->
-  <div class="bgcolor green " v-footer></div>
+  <div>
+    <div class="bgcolor green ">
+      <span v-footer></span>
+      <router-link to="licence"><p>Licence</p></router-link>
+    </div>
+  </div>
 </template>
 <script>
 export default {
@@ -20,6 +25,9 @@ export default {
 </script>
 
 <style scoped>
+p {
+  color: #42b983;
+}
 h3 {
   margin: 40px 0 0;
 }
