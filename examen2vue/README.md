@@ -20,7 +20,7 @@ La navigation se fait _sans post back_, c'est à dire que le navigateur ne recha
 
 ![Image text](/src/assets/img/projet-entete.png)
 
-## Imstallation du projet
+## Installation du projet
 
 ```
 npm install
