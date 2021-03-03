@@ -2,7 +2,7 @@ import { shallowMount } from "@vue/test-utils";
 import Foo from "../src/components/Foo.vue";
 
 describe("Foo", () => {
-  it("restitue un message et répond correctement à la saisie de l'utilisateur", () => {
+  it("retourne correctement un message à l'utilisateur", () => {
     const wrapper = shallowMount(Foo, {
       data() {
         return {

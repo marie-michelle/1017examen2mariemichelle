@@ -1,8 +1,8 @@
-// Test si le composant affiche
+// Test si le composant Contact affiche
 import { mount } from "@vue/test-utils";
 import Contact from "../src/views/Contact";
 
-test("mount a vue component", () => {
+test("monte le composant Contact", () => {
   const wrapper = mount(Contact);
   console.log(wrapper);
 });

@@ -1,9 +1,9 @@
-// Test si le composant affiche
+// Test si le composant Projet affiche
 
 import { mount } from "@vue/test-utils";
 import Projets from "../src/views/Projets";
 
-test("mount a vue component", () => {
+test("monte le composant Projet", () => {
   const wrapper = mount(Projets);
   console.log(wrapper);
 });

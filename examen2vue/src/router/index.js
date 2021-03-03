@@ -5,11 +5,8 @@ import Accueil from "../views/Accueil.vue";
 Vue.use(VueRouter);
 
 const routes = [
-  {
-    path: "*",
-    name: "NotFound",
-    component: () => import("../views/NotFound.vue"),
-  },
+  { path: "*", redirect: "/" },
+
   {
     path: "/",
     name: "Accueil",
