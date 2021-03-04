@@ -1,7 +1,7 @@
 <template>
   <!-- Directive de bas de page -->
   <div>
-    <div class="bgcolor green ">
+    <div class="bgcolor green footer">
       <span v-footer></span>
       <router-link to="licence"><p>Licence</p></router-link>
     </div>
@@ -44,5 +44,12 @@ a {
 }
 .green {
   color: #42b983;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 </style>

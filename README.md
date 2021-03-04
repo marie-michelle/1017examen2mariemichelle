@@ -1,41 +1,49 @@
-# 1017examen2mariemichelle
+# examen2vue
 
-Git Hub
-Accueil/Repositories/New
-Repository name
-Set public or private
-Add a README file
-Create repository
-Aller dans le repository
-Code / Copier le lien
+## Description
 
-Dans le terminal
-cd pour se déplacer dans les dossiers
-mkdir pour créer un dossier au besoin
-git clone + le lien copié précédement pour 
-code . pour ouvrir le dossier dans Visual Studio Code
-OU
-git init pour convertir un projet existant ou créer un nouveau dépot
-git add + nom du dossier
-git commit -m 'commentaire'
-git push
+Examen2vue est une application de type _OnePage_ ayant pour objectif l'apprentissage académique des pratiques du développement web soit la documentation, les tests et la mise en production d'un projet. Le projet est structuré grâce au _Framework_ Vue2. L'examen2Vue est structuré à l'aide de plusieurs composants dont 6 _Views_ représentant les pages, et 6 _components_ qui composent les vues.
 
-Commandes pour céer un projet Vue/CLI
-Installer Vue2
+Le projet simule un portfolio, qui intègre un accueil, une page utilisateur détaillant le profil d'une personne, une page projet, et un formulaire contact. L'application comporte également un lien vers le portfolio officiel ainsi qu'une licence en pied de page.
 
-npm install -g @vue/cli
-(Choisir Vue2)
-npm update -g @vue/cli (pour mettre à jour)
-vue create nomduprojet
+# Besoins fonctionnels
 
-Démarrer le projet
+On simule la connexion d'un usager avec une fonction booleenne, qui applique un changement au routing.
+
+On propose également un mixin qui traduit les libellés du site en langue anglaise.
+
+Un fomulaire de contact est intégré, avec une gestion basique des erreurs. Le formulaire ne soumet rien.
+
+La navigation se fait _sans post back_, c'est à dire que le navigateur ne recharge pas chaque fois les pages du site.
+
+### Capture écran du projet
+
+![Image text](/src/assets/img/projet-entete.png)
+
+## Installation du projet
+
+```
+npm install
+```
+
+### Pour compiler et lancer le projet:
+
+```
 npm run serve
+```
 
-Les routes
-npm i vue-router@next --save
+### Pour compiler et minimifier pour mettre en production
 
-Typescript
-npm install -g typescript ts-node
-npm install -g ts-node
-npm install -g typescript
+```
+npm run build
+```
 
+### Analyse et réparation des fichiers
+
+```
+npm run lint
+```
+
+### Configuration
+
+Voir [Référence pour la configuration](https://cli.vuejs.org/config/).
